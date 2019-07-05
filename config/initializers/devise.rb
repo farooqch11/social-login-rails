@@ -28,11 +28,12 @@ Devise.setup do |config|
   # available as additional gems.
   require 'devise/orm/active_record'
   config.sign_out_via = :get
-  config.omniauth :facebook, ENV["FACEBOOK_KEY"], ENV["FACEBOOK_SECRET"], { :scope => 'email', :client_options => {:ssl => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'}}}
-  config.omniauth :twitter, ENV["TWITTER_KEY"], ENV["TWITTER_SECRET"], { :scope => 'r_fullprofile, r_emailaddress', :client_options => {:ssl => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'}}}
-  config.omniauth :linkedin, ENV["LINKEDIN_KEY"], ENV["LINKEDIN_SECRET"], { :scope => 'r_basicprofile r_emailaddress', :client_options => {:ssl => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'}}}
-  config.omniauth :github, ENV['GITHUB_KEY'], ENV['GITHUB_SECRET'], scope: "user, public_repo"
-  config.omniauth :google_oauth2, ENV['GOOGLE_KEY'], ENV['GOOGLE_SECRET'], {}
+  config.omniauth :facebook, "402930293635613", "7ffa045624abd001e742965b6c8fe4aa", { :scope => 'email'}
+  config.omniauth :twitter, "M7bSKmPtb5NBF9CzLvsgYQ8nJ", "R058QukVPaEVF5R88fKNFO4hb4pxYM4z63VghkpPNWy41AdNOB", { :scope => 'r_fullprofile, r_emailaddress'}
+  # config.omniauth :linkedin, ENV["LINKEDIN_KEY"], ENV["LINKEDIN_SECRET"], { :scope => 'r_basicprofile r_emailaddress'}
+  # config.omniauth :github, ENV['GITHUB_KEY'], ENV['GITHUB_SECRET'], scope: "user, public_repo"
+  config.omniauth :google_oauth2, "128930193520-h63aoe2o57cbvtokpp8gs3o9omdab5tm.apps.googleusercontent.com", "AuAv8AYJIUCx5gHhZWqZ7sDF", {}
+  # config.omniauth :google_oauth2, "128930193520-h63aoe2o57cbvtokpp8gs3o9omdab5tm.apps.googleusercontent.com", "AuAv8AYJIUCx5gHhZWqZ7sDF", {}
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is
   # just :email. You can configure it to use [:username, :subdomain], so for

@@ -31,9 +31,16 @@ gem 'omniauth-github'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-linkedin-oauth2'
 gem 'omniauth-twitter'
-gem 'rmagick'
+# gem 'rmagick'
 gem 'simple_form'
 gem 'pg'
+gem 'koala'
+gem 'fb_graph2'
+gem 'bootstrap-social-rails'
+gem 'font-awesome-rails'
+gem 'font-awesome-sass', '~> 5.8.1'
+
+
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
